@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ada Lovelace — Museu Digital da Matemática</title>
+<meta name="description" content="Artigo do Museu Digital da Matemática sobre Ada Lovelace: matemática e pioneira da programação.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400..600&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="page-body page-ada">
+<a href="#conteudo-principal" class="skip-link"> Pular para o conteúdo principal </a>
+
+<!-- ===================== HEADER ===================== -->
+<header class="site-header">
+  <div class="header-left">
+    <button type="button" class="hamburger" data-hamburger aria-label="Abrir menu de navegação" aria-expanded="false">☰</button>
+    <a href="index.html" class="brand">
+      <svg class="brand-icon" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <circle cx="14" cy="14" r="12.5" stroke="currentColor" stroke-width="1.5"/>
+        <path d="M8 18V10L14 16L20 10V18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span class="brand-name">Museu Digital<span>da Matemática</span></span>
+    </a>
+  </div>
+  <div class="header-right">
+    <form class="search-form" data-search-form role="search">
+      <label for="search-input" class="visually-hidden" style="position:absolute;left:-9999px;">Pesquisar</label>
+      <input type="search" id="search-input" class="search-input" placeholder="Pesquisar no museu...">
+      <button type="submit" class="search-btn">Pesquisar</button>
+    </form>
+    <button type="button" class="hamburger search-toggle" data-search-toggle style="display:none;" aria-label="Abrir pesquisa">🔍</button>
+    <button type="button" class="theme-toggle" data-theme-toggle aria-label="Alternar tema escuro">
+      <i data-lucide="palette"></i>
+    </button>
+  </div>
+</header>
+
+<div class="search-feedback" data-search-feedback role="status" aria-live="polite"></div>
+
+<div class="sidebar-overlay" data-sidebar-overlay></div>
+
+<div class="layout">
+
+  <!-- ===================== SIDEBAR ===================== -->
+  <nav class="sidebar" data-sidebar aria-label="Navegação do artigo">
+    <button type="button" class="hamburger sidebar-close" data-sidebar-close aria-label="Fechar menu">✕</button>
+
+    <p class="sidebar-current-page">Ada Lovelace</p>
+
+    <div class="sidebar-group">
+      <p class="sidebar-heading">CONTEÚDO</p>
+      <ul class="sidebar-list">
+        <li><a href="#inicio">Início</a></li>
+        <li><a href="#infancia-familia">Infância e família</a></li>
+        <li><a href="#educacao">Educação</a></li>
+        <li><a href="#charles-babbage">Charles Babbage</a></li>
+        <li><a href="#maquina-analitica">Máquina Analítica</a></li>
+        <li><a href="#primeiro-algoritmo">Primeiro algoritmo</a></li>
+        <li><a href="#matematica">Matemática</a></li>
+        <li><a href="#legado">Legado</a></li>
+        <li><a href="#linha-do-tempo">Linha do tempo</a></li>
+        <li><a href="#referencias">Referências</a></li>
+      </ul>
+    </div>
+
+    <div class="sidebar-group">
+      <p class="sidebar-heading">OUTRAS PERSONALIDADES</p>
+      <ul class="sidebar-list">
+        <li><a href="index.html">Alan Turing</a></li>
+      </ul>
+    </div>
+
+    <div class="sidebar-group">
+      <p class="sidebar-heading">NAVEGAÇÃO</p>
+      <ul class="sidebar-list">
+        <li><a href="paginainicial.html">Museu Digital</a></li>
+        <li><a href="index.html">Alan Turing</a></li>
+        <li><a href="ada-lovelace.html">Ada Lovelace</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ===================== ARTIGO ===================== -->
+  <main class="article-wrapper" id="conteudo-principal">
+    <article>
+
+      <section class="article-intro-section fade-in" id="inicio">
+        <p class="article-meta">Artigo do Museu Digital da Matemática</p>
+        <h1 class="article-title">Ada Lovelace</h1>
+        <p class="article-subtitle">Matemática e pioneira da programação.</p>
+        <hr class="article-divider">
+        <div class="article-intro">
+          <p>Augusta Ada King, Condessa de Lovelace, foi uma matemática britânica conhecida por seu trabalho relacionado à Máquina Analítica, projeto idealizado pelo matemático e inventor Charles Babbage. Suas anotações sobre o funcionamento dessa máquina são hoje reconhecidas como um marco importante na história das ideias que antecederam a computação moderna, por descreverem, de forma detalhada, como a máquina poderia seguir uma sequência de instruções para realizar operações.</p>
+        </div>
+      </section>
+      <figure class="museum-figure fade-in">
+        <img src="images/fig-ada-engrenagens.svg" alt="Engrenagens de vários tamanhos sobre fundo púrpura" width="900" height="300" loading="lazy">
+        <figcaption>Ilustração: engrenagens, símbolo das máquinas de calcular mecânicas do século XIX.</figcaption>
+      </figure>
+
+
+      <section class="article-section fade-in" id="infancia-familia">
+        <h2>Infância e família</h2>
+        <p>Ada nasceu em uma família de destaque na sociedade britânica do início do século XIX. Sua mãe, preocupada com o temperamento do pai de Ada, incentivou desde cedo uma educação voltada para a lógica e a matemática, buscando cultivar na filha um raciocínio disciplinado e racional.</p>
+        <p>Esse ambiente familiar, incomum para meninas da época, foi determinante para que Ada desenvolvesse, ainda jovem, um interesse profundo por ciências exatas, em um período no qual o acesso de mulheres à educação formal em matemática era bastante restrito.</p>
+      </section>
+      <figure class="museum-figure fade-in">
+        <img src="images/fig-ada-arcos.svg" alt="Janelas em arco em linhas finas" width="900" height="300" loading="lazy">
+        <figcaption>Ilustração: janelas em arco, inspiradas na arquitetura britânica do século XIX.</figcaption>
+      </figure>
+
+
+      <section class="article-section fade-in" id="educacao">
+        <h2>Educação</h2>
+        <p>Ada recebeu instrução particular em matemática, contando com tutores que reconheceram e estimularam seu talento incomum para a área. Essa formação, construída fora do sistema educacional tradicional disponível às mulheres da época, permitiu que ela alcançasse um nível de conhecimento matemático avançado.</p>
+        <p>Ao longo da vida, manteve contato com matemáticos e cientistas de destaque, o que contribuiu para aprofundar ainda mais sua compreensão sobre temas complexos da matemática de seu tempo.</p>
+      </section>
+      <figure class="museum-figure fade-in">
+        <img src="images/fig-ada-geometria.svg" alt="Círculos e triângulo inscrito" width="900" height="300" loading="lazy">
+        <figcaption>Ilustração: figuras geométricas, parte da formação matemática de Ada.</figcaption>
+      </figure>
+
+
+      <section class="article-section fade-in" id="charles-babbage">
+        <h2>Charles Babbage</h2>
+        <p>Ada conheceu <strong>Charles Babbage</strong>, matemático e inventor responsável por projetar máquinas de cálculo mecânicas, em um encontro social. A partir dessa relação, os dois desenvolveram uma colaboração intelectual duradoura, na qual Ada demonstrou grande interesse pelos projetos de Babbage e pela lógica envolvida em seu funcionamento.</p>
+        <p>Essa colaboração se tornaria um dos episódios mais importantes da carreira de Ada, pois foi a partir do trabalho conjunto com Babbage que ela desenvolveu suas contribuições mais conhecidas.</p>
+      </section>
+      <figure class="museum-figure fade-in">
+        <img src="images/fig-ada-rodas.svg" alt="Colunas de rodas numeradas" width="900" height="300" loading="lazy">
+        <figcaption>Ilustração: rodas numeradas, como as das máquinas de calcular mecânicas projetadas por Babbage.</figcaption>
+      </figure>
+
+
+      <section class="article-section fade-in" id="maquina-analitica">
+        <h2>Máquina Analítica</h2>
+        <p>A <strong>Máquina Analítica</strong> foi um projeto idealizado por Babbage para uma máquina de calcular mecânica capaz de realizar operações matemáticas seguindo uma sequência programável de instruções, algo inovador para a época. Diferente de calculadoras simples, ela foi concebida para poder executar diferentes tipos de operações a partir de instruções fornecidas por meio de cartões perfurados.</p>
+
+        <div class="info-card concept">
+          <span class="info-card-label">Conceito</span>
+          <p>A Máquina Analítica nunca chegou a ser construída por completo durante a vida de Babbage, mas seu projeto teórico já reunia elementos que, mais tarde, seriam reconhecidos como característicos de um computador programável.</p>
+        </div>
+
+        <p>O projeto representava uma mudança conceitual importante: a ideia de que uma máquina poderia ser instruída a realizar diferentes tarefas, e não apenas uma única função fixa, é considerada por historiadores da computação um passo relevante rumo à ideia moderna de programação.</p>
+      </section>
+      <figure class="museum-figure fade-in">
+        <img src="images/fig-ada-cartoes.svg" alt="Cartões perfurados lado a lado" width="900" height="300" loading="lazy">
+        <figcaption>Ilustração: cartões perfurados, usados para fornecer instruções à Máquina Analítica.</figcaption>
+      </figure>
+
+
+      <section class="article-section fade-in" id="primeiro-algoritmo">
+        <h2>O primeiro algoritmo</h2>
+        <p>Ao traduzir e ampliar um artigo sobre a Máquina Analítica, Ada acrescentou notas extensas e detalhadas, entre 1842 e 1843, que se tornaram mais longas do que o texto original. Nessas notas, ela descreveu, com grande precisão, uma sequência de instruções que a máquina poderia seguir para calcular os números de Bernoulli.</p>
+
+        <div class="info-card">
+          <span class="info-card-label">Importância histórica</span>
+          <p>Essa descrição é amplamente citada como um dos primeiros exemplos registrados de um algoritmo destinado a ser executado por uma máquina, o que confere a Ada um papel de destaque na história inicial da programação.</p>
+        </div>
+
+        <p>É importante compreender esse trabalho dentro de seu contexto histórico: a máquina descrita nunca foi construída por completo, e o próprio conceito de "programação" ainda não existia formalmente na época. Ainda assim, o raciocínio estruturado presente nas notas de Ada é reconhecido por historiadores como uma contribuição conceitual pioneira e significativa.</p>
+      </section>
+      <figure class="museum-figure fade-in">
+        <img src="images/fig-ada-bernoulli.svg" alt="Cinco frações em molduras" width="900" height="300" loading="lazy">
+        <figcaption>Ilustração: números de Bernoulli, tema do cálculo descrito por Ada em suas notas.</figcaption>
+      </figure>
+
+
+      <section class="article-section fade-in" id="matematica">
+        <h2>Matemática</h2>
+        <p>Ao longo de sua vida, Ada manteve um interesse constante pela matemática, aprofundando-se em temas como álgebra e lógica. Ela via na matemática não apenas uma ferramenta de cálculo, mas também uma linguagem capaz de representar processos e relações de forma precisa — visão que se refletiu diretamente em sua análise sobre a Máquina Analítica.</p>
+        <p>Essa forma de pensar, que unia rigor matemático a uma visão mais ampla sobre o potencial das máquinas de calcular, é um dos aspectos mais destacados de sua obra.</p>
+      </section>
+      <figure class="museum-figure fade-in">
+        <img src="images/fig-ada-curvas.svg" alt="Curvas onduladas sobrepostas" width="900" height="300" loading="lazy">
+        <figcaption>Ilustração: curvas e ondas, a matemática como linguagem para representar relações.</figcaption>
+      </figure>
+
+
+      <section class="article-section fade-in" id="legado">
+        <h2>Legado</h2>
+        <p>O legado de Ada Lovelace é reconhecido em diferentes áreas:</p>
+        <p><strong>História da computação:</strong> suas notas sobre a Máquina Analítica são um dos primeiros registros detalhados sobre a ideia de instruir uma máquina a executar sequências de operações.</p>
+        <p><strong>Programação:</strong> a descrição do cálculo dos números de Bernoulli é frequentemente citada como um exemplo pioneiro de algoritmo voltado à execução por máquina.</p>
+        <p><strong>Matemática:</strong> sua formação e produção intelectual demonstram um domínio incomum da matemática para uma mulher em seu contexto histórico.</p>
+        <p><strong>Participação feminina na ciência:</strong> sua trajetória é hoje lembrada como um símbolo importante da presença feminina na história da ciência e da tecnologia, em um período no qual essa participação era pouco reconhecida.</p>
+      </section>
+
+      <section class="article-section fade-in" id="linha-do-tempo">
+        <h2>Linha do tempo</h2>
+        <div class="timeline">
+          <div class="timeline-track">
+            <div class="timeline-item">
+              <p class="timeline-year">1815</p>
+              <p class="timeline-desc">Nascimento</p>
+            </div>
+            <div class="timeline-item">
+              <p class="timeline-year">1833</p>
+              <p class="timeline-desc">Conhece Charles Babbage</p>
+            </div>
+            <div class="timeline-item">
+              <p class="timeline-year">1842–1843</p>
+              <p class="timeline-desc">Tradução e ampliação das notas sobre a Máquina Analítica</p>
+            </div>
+            <div class="timeline-item">
+              <p class="timeline-year">1843</p>
+              <p class="timeline-desc">Publicação das notas</p>
+            </div>
+            <div class="timeline-item">
+              <p class="timeline-year">1852</p>
+              <p class="timeline-desc">Falecimento</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="article-section fade-in" id="conexao-historica">
+        <h2>Conexão histórica</h2>
+        <div class="connection-box">
+          <p>Décadas antes de Alan Turing estabelecer os fundamentos teóricos da computação moderna, Ada Lovelace já havia refletido sobre a possibilidade de uma máquina seguir uma sequência de instruções para realizar operações. Embora seus contextos históricos fossem muito diferentes, ambos ocupam lugares importantes na história das ideias que ajudaram a formar a computação.</p>
+          <a href="index.html" class="connection-link">Conheça Alan Turing</a>
+        </div>
+      </section>
+
+      <section class="article-section fade-in" id="referencias">
+  <h2>Referências</h2>
+  <ul class="references-list">
+
+    <li>
+      <span class="ref-name">
+        <a href="https://www.sciencemuseum.org.uk/" target="_blank" rel="noopener noreferrer">
+          Science Museum
+        </a>
+      </span>
+      <span class="ref-desc">
+        Acervo e recursos sobre a história da computação, Ada Lovelace e Charles Babbage.
+      </span>
+    </li>
+
+    <li>
+      <span class="ref-name">
+        <a href="https://www.britannica.com/biography/Ada-Lovelace" target="_blank" rel="noopener noreferrer">
+          Encyclopaedia Britannica
+        </a>
+      </span>
+      <span class="ref-desc">
+        Biografia e contexto histórico sobre Ada Lovelace e sua contribuição para a computação.
+      </span>
+    </li>
+
+    <li>
+      <span class="ref-name">
+        <a href="https://www.computerhistory.org/" target="_blank" rel="noopener noreferrer">
+          Computer History Museum
+        </a>
+      </span>
+      <span class="ref-desc">
+        Materiais sobre a história inicial da computação e o desenvolvimento das máquinas de cálculo.
+      </span>
+    </li>
+
+    <li>
+      <span class="ref-name">
+        <a href="https://www.bodleian.ox.ac.uk/" target="_blank" rel="noopener noreferrer">
+          Bodleian Libraries — University of Oxford
+        </a>
+      </span>
+      <span class="ref-desc">
+        Arquivos e documentos históricos relacionados a Ada Lovelace e à história da ciência.
+      </span>
+    </li>
+
+    <li>
+      <span class="ref-name">
+        <a href="https://www.maths.ox.ac.uk/node/28239" target="_blank" rel="noopener noreferrer">
+          Ada Lovelace: The Making of a Computer Scientist
+        </a>
+      </span>
+      <span class="ref-desc">
+        Livro de Christopher Hollings, Ursula Martin e Adrian Rice sobre a formação matemática de Ada Lovelace e seu trabalho com a Máquina Analítica.
+      </span>
+    </li>
+
+    <li>
+      <span class="ref-name">
+        <a href="https://www.gutenberg.org/files/75107/75107-h/75107-h.htm" target="_blank" rel="noopener noreferrer">
+          Sketch of the Analytical Engine — Luigi Federico Menabrea, com notas de Ada Lovelace
+        </a>
+      </span>
+      <span class="ref-desc">
+        Fonte histórica publicada em 1843, contendo as notas de Ada Lovelace sobre a Máquina Analítica de Charles Babbage.
+      </span>
+    </li>
+
+  </ul>
+</section>
+
+    </article>
+  </main>
+
+  <!-- ===================== INFOBOX ===================== -->
+  <aside class="infobox" aria-label="Informações resumidas sobre Ada Lovelace">
+    <p class="infobox-title">Ada Lovelace</p>
+    <!-- Imagem histórica de domínio público de Ada Lovelace.
+         Substitua o caminho abaixo por assets/ada-lovelace.jpg
+         com uma imagem licenciada adequadamente. -->
+    <img class="infobox-image" src="images/ada lovalace.jpg" alt="Retrato histórico de Ada Lovelace">
+    <p class="infobox-caption">Ada Lovelace, matemática britânica.</p>
+    <table class="infobox-table">
+      <tbody>
+        <tr>
+          <th scope="row">Nome</th>
+          <td>Augusta Ada King, Condessa de Lovelace</td>
+        </tr>
+        <tr>
+          <th scope="row">Nascimento</th>
+          <td>10 de dezembro de 1815</td>
+        </tr>
+        <tr>
+          <th scope="row">Falecimento</th>
+          <td>27 de novembro de 1852</td>
+        </tr>
+        <tr>
+          <th scope="row">Área</th>
+          <td>Matemática</td>
+        </tr>
+        <tr>
+          <th scope="row">Conhecida por</th>
+          <td>
+            <ul>
+              <li>Trabalho com a Máquina Analítica</li>
+              <li>Algoritmo para a Máquina Analítica</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">Colaboração</th>
+          <td>Charles Babbage</td>
+        </tr>
+      </tbody>
+    </table>
+  </aside>
+
+</div>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="site-footer">
+  <p class="footer-brand">Museu Digital da Matemática</p>
+  <p class="footer-tagline">Um projeto educacional dedicado à história da matemática e da computação.</p>
+  <nav class="footer-links" aria-label="Links do rodapé">
+    <a href="index.html">Alan Turing</a>
+    <a href="ada-lovelace.html">Ada Lovelace</a>
+  </nav>
+  <p class="footer-note">Projeto desenvolvido para fins educacionais. &copy; <span data-current-year></span></p>
+</footer>
+
+<button type="button" class="back-to-top" data-back-to-top aria-label="Voltar ao topo">↑</button>
+
+<script type="module">
+  import { createIcons, Palette } from 'https://esm.sh/lucide';
+  createIcons({ icons: { Palette } });
+</script>
+<script src="js/script.js"></script>
+</body>
+</html>

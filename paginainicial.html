@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Museu Digital da Matemática</title>
+
+  <meta name="description"
+    content="Museu Digital da Matemática: conheça a história, as ideias e as contribuições de grandes personalidades da matemática e da computação.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400..600&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="page-body page-home">
+
+  <a href="#conteudo-principal" class="skip-link">
+    Pular para o conteúdo principal
+  </a>
+
+
+  <!-- ===================== HEADER ===================== -->
+
+  <header class="site-header">
+
+    <div class="header-left">
+
+      <button
+        type="button"
+        class="hamburger"
+        data-hamburger
+        aria-label="Abrir menu de navegação"
+        aria-expanded="false">
+        ☰
+      </button>
+
+      <a href="paginainicial.html" class="brand">
+
+        <svg
+          class="brand-icon"
+          width="28"
+          height="28"
+          viewBox="0 0 28 28"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          aria-hidden="true">
+
+          <circle
+            cx="14"
+            cy="14"
+            r="12.5"
+            stroke="currentColor"
+            stroke-width="1.5" />
+
+          <path
+            d="M8 18V10L14 16L20 10V18"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round" />
+
+        </svg>
+
+        <span class="brand-name">
+          Museu Digital
+          <span>da Matemática</span>
+        </span>
+
+      </a>
+
+    </div>
+
+
+    <div class="header-right">
+
+      <form
+        class="search-form"
+        data-search-form
+        role="search">
+
+        <label
+          for="search-input"
+          class="visually-hidden"
+          style="position:absolute;left:-9999px;">
+          Pesquisar
+        </label>
+
+        <input
+          type="search"
+          id="search-input"
+          class="search-input"
+          placeholder="Pesquisar no museu...">
+
+        <button
+          type="submit"
+          class="search-btn">
+          Pesquisar
+        </button>
+
+      </form>
+
+
+      <button
+        type="button"
+        class="hamburger search-toggle"
+        data-search-toggle
+        style="display:none;"
+        aria-label="Abrir pesquisa">
+        🔍
+      </button>
+
+
+      <button
+        type="button"
+        class="theme-toggle"
+        data-theme-toggle
+        aria-label="Alternar tema escuro">
+
+        <i data-lucide="palette"></i>
+      </button>
+
+    </div>
+
+  </header>
+
+
+  <div
+    class="search-feedback"
+    data-search-feedback
+    role="status"
+    aria-live="polite">
+  </div>
+
+
+  <div
+    class="sidebar-overlay"
+    data-sidebar-overlay>
+  </div>
+
+
+  <div class="layout">
+
+
+    <!-- ===================== SIDEBAR ===================== -->
+
+    <nav
+      class="sidebar"
+      data-sidebar
+      aria-label="Navegação do museu">
+
+      <button
+        type="button"
+        class="hamburger sidebar-close"
+        data-sidebar-close
+        aria-label="Fechar menu">
+        ✕
+      </button>
+
+
+      <p class="sidebar-current-page">
+        Museu Digital
+      </p>
+
+
+      <div class="sidebar-group">
+
+        <p class="sidebar-heading">
+          SOBRE O MUSEU
+        </p>
+
+        <ul class="sidebar-list">
+
+          <li>
+            <a href="#inicio">
+              Início
+            </a>
+          </li>
+
+          <li>
+            <a href="#sobre">
+              Sobre o museu
+            </a>
+          </li>
+
+          <li>
+            <a href="#objetivo">
+              Nossa proposta
+            </a>
+          </li>
+
+          <li>
+            <a href="#personalidades">
+              Personalidades
+            </a>
+          </li>
+
+          <li>
+            <a href="#explore">
+              Explore o museu
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+
+      <div class="sidebar-group">
+
+        <p class="sidebar-heading">
+          PERSONALIDADES
+        </p>
+
+        <ul class="sidebar-list">
+
+          <li>
+            <a href="ada-lovelace.html">
+              Ada Lovelace
+            </a>
+          </li>
+
+          <li>
+            <a href="index.html">
+              Alan Turing
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+
+      <div class="sidebar-group">
+
+        <p class="sidebar-heading">
+          NAVEGAÇÃO
+        </p>
+
+        <ul class="sidebar-list">
+
+          <li>
+            <a href="paginainicial.html">
+              Museu Digital
+            </a>
+          </li>
+
+          <li>
+            <a href="ada-lovelace.html">
+              Ada Lovelace
+            </a>
+          </li>
+
+          <li>
+            <a href="index.html">
+              Alan Turing
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </nav>
+
+
+
+    <!-- ===================== CONTEÚDO ===================== -->
+
+    <main
+      class="article-wrapper"
+      id="conteudo-principal">
+
+      <article>
+
+
+        <!-- ===================== INTRODUÇÃO ===================== -->
+
+        <section
+          class="article-intro-section fade-in"
+          id="inicio">
+
+          <p class="article-meta">
+            Museu Digital da Matemática
+          </p>
+
+          <h1 class="article-title">
+            Museu Digital da Matemática
+          </h1>
+
+          <p class="article-subtitle">
+            Um espaço dedicado à história, às ideias e às contribuições de grandes personalidades da matemática e da computação.
+          </p>
+
+          <hr class="article-divider">
+
+          <div class="article-intro">
+
+            <p>
+              O Museu Digital da Matemática é um espaço criado para apresentar,
+              de forma acessível, a trajetória e o legado de personalidades que
+              contribuíram para o desenvolvimento da matemática, da ciência e
+              da computação.
+            </p>
+
+            <p>
+              Aqui, você pode conhecer diferentes momentos da vida dessas
+              pessoas, suas principais descobertas, seus trabalhos e a
+              importância de suas contribuições para a sociedade.
+            </p>
+
+          </div>
+
+        </section>
+      <figure class="museum-figure fade-in">
+        <img src="images/fig-museu-colunas.svg" alt="Fachada de museu com colunas" width="900" height="300" loading="lazy">
+        <figcaption>Ilustração: um museu aberto a quem quer conhecer a história da matemática.</figcaption>
+      </figure>
+
+
+
+
+        <!-- ===================== SOBRE ===================== -->
+
+        <section
+          class="article-section fade-in"
+          id="sobre">
+
+          <h2>
+            Sobre o museu
+          </h2>
+
+          <p>
+            A matemática está presente em diferentes áreas do conhecimento e
+            teve participação fundamental no desenvolvimento da ciência e da
+            tecnologia.
+          </p>
+
+          <p>
+            Ao longo da história, diversas pessoas dedicaram suas vidas ao
+            estudo da matemática, da lógica e de outras áreas relacionadas.
+            Suas ideias ajudaram a transformar a maneira como entendemos o
+            mundo e também contribuíram para o surgimento de tecnologias que
+            fazem parte do nosso cotidiano.
+          </p>
+
+          <p>
+            O Museu Digital da Matemática busca apresentar parte dessa história
+            por meio de páginas dedicadas a personalidades que tiveram
+            destaque nesse processo.
+          </p>
+
+        </section>
+      <figure class="museum-figure fade-in">
+        <img src="images/fig-museu-simbolos.svg" alt="Símbolos matemáticos sobre fundo azul" width="900" height="300" loading="lazy">
+        <figcaption>Ilustração: ideias que atravessaram séculos.</figcaption>
+      </figure>
+
+
+
+
+        <!-- ===================== OBJETIVO ===================== -->
+
+        <section
+          class="article-section fade-in"
+          id="objetivo">
+
+          <h2>
+            Nossa proposta
+          </h2>
+
+          <p>
+            O objetivo do Museu Digital é tornar o conhecimento histórico e
+            científico mais acessível, reunindo informações sobre pessoas,
+            ideias e acontecimentos importantes para a evolução da matemática
+            e da computação.
+          </p>
+
+          <div class="info-card concept">
+
+            <span class="info-card-label">
+              Proposta
+            </span>
+
+            <p>
+              Conhecer a história da matemática também significa conhecer as
+              pessoas e as ideias que ajudaram a construir o conhecimento que
+              temos hoje.
+            </p>
+
+          </div>
+
+          <p>
+            Cada página do museu apresenta uma personalidade diferente,
+            permitindo explorar sua trajetória, seus principais trabalhos e
+            seu legado.
+          </p>
+
+        </section>
+      <figure class="museum-figure fade-in">
+        <img src="images/fig-museu-rede.svg" alt="Rede de nós conectados" width="900" height="300" loading="lazy">
+        <figcaption>Ilustração: pessoas, ideias e acontecimentos conectados.</figcaption>
+      </figure>
+
+
+
+
+        <!-- ===================== PERSONALIDADES ===================== -->
+
+        <section
+          class="article-section fade-in"
+          id="personalidades">
+
+          <h2>
+            Personalidades em destaque
+          </h2>
+
+          <p>
+            Atualmente, o museu apresenta duas personalidades que tiveram
+            contribuições importantes para a história da matemática e da
+            computação.
+          </p>
+
+
+          <div class="connection-box">
+
+            <img class="person-thumb" src="images/ada lovalace.jpg" alt="Retrato de Ada Lovelace">
+<p>
+              <strong>Ada Lovelace</strong>
+            </p>
+
+            <p>
+              Matemática britânica e pioneira da programação. Seus estudos
+              relacionados à Máquina Analítica de Charles Babbage são
+              considerados importantes para a história da computação.
+            </p>
+
+            <a
+              href="ada-lovelace.html"
+              class="connection-link">
+              Conheça Ada Lovelace
+            </a>
+
+          </div>
+
+
+          <div class="connection-box">
+
+            <img class="person-thumb" src="images/alan turing.jpg" alt="Retrato de Alan Turing">
+<p>
+              <strong>Alan Turing</strong>
+            </p>
+
+            <p>
+              Matemático, lógico, criptanalista e pioneiro da ciência da
+              computação. Seus trabalhos ajudaram a estabelecer importantes
+              fundamentos teóricos da computação moderna.
+            </p>
+
+            <a
+              href="index.html"
+              class="connection-link">
+              Conheça Alan Turing
+            </a>
+
+          </div>
+
+        </section>
+
+
+
+        <!-- ===================== EXPLORAR ===================== -->
+
+        <section
+          class="article-section fade-in"
+          id="explore">
+
+          <h2>
+            Explore o Museu
+          </h2>
+
+          <p>
+            Conheça a trajetória, os trabalhos e o legado de personalidades
+            que ajudaram a transformar a matemática, a lógica e a computação.
+          </p>
+
+          <p>
+            Comece sua visita escolhendo uma das personalidades disponíveis
+            no museu.
+          </p>
+
+          <div class="connection-box">
+
+            <p>
+              <strong>
+                Comece sua visita
+              </strong>
+            </p>
+
+            <p>
+              Explore as páginas de Ada Lovelace e Alan Turing e conheça suas
+              contribuições para a história da matemática e da computação.
+            </p>
+
+            <a
+              href="ada-lovelace.html"
+              class="connection-link">
+              Conhecer Ada Lovelace
+            </a>
+
+            <a
+              href="index.html"
+              class="connection-link">
+              Conhecer Alan Turing
+            </a>
+
+          </div>
+
+        </section>
+        
+      </article>
+
+    </main>
+
+
+
+    <!-- ===================== INFORMAÇÕES LATERAIS ===================== -->
+
+    <aside class="article-aside">
+
+      <div class="infobox">
+
+        <div class="infobox-title">
+          Museu Digital da Matemática
+        </div>
+
+        <div class="infobox-image">
+          <img
+            src="images/imagem museu.avif"
+            alt="Museu Digital da Matemática">
+        </div>
+
+        <table>
+
+          <tr>
+            <th>Tipo</th>
+            <td>Museu digital</td>
+          </tr>
+
+          <tr>
+            <th>Área</th>
+            <td>Matemática e computação</td>
+          </tr>
+
+          <tr>
+            <th>Conteúdo</th>
+            <td>Personalidades e história</td>
+          </tr>
+
+          <tr>
+            <th>Objetivo</th>
+            <td>Divulgação e conhecimento</td>
+          </tr>
+
+        </table>
+
+      </div>
+
+    </aside>
+
+  </div>
+
+
+  <script type="module">
+    import { createIcons, Palette } from 'https://esm.sh/lucide';
+    createIcons({ icons: { Palette } });
+  </script>
+  <script src="js/script.js"></script>
+
+</body>
+
+</html>

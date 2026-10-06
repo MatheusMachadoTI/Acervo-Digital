@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alan Turing — Museu Digital da Matemática</title>
+<meta name="description" content="Artigo do Museu Digital da Matemática sobre Alan Turing: matemático, lógico, criptanalista e pioneiro da ciência da computação.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400..600&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="page-body page-turing">
+<a href="#conteudo-principal" class="skip-link">Pular para o conteúdo principal</a>
+
+<!-- ===================== HEADER ===================== -->
+<header class="site-header">
+  <div class="header-left">
+    <button type="button" class="hamburger" data-hamburger aria-label="Abrir menu de navegação" aria-expanded="false">☰</button>
+    <a href="index.html" class="brand">
+      <svg class="brand-icon" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <circle cx="14" cy="14" r="12.5" stroke="currentColor" stroke-width="1.5"/>
+        <path d="M8 18V10L14 16L20 10V18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span class="brand-name">Museu Digital<span>da Matemática</span></span>
+    </a>
+  </div>
+  <div class="header-right">
+    <form class="search-form" data-search-form role="search">
+      <label for="search-input" class="visually-hidden" style="position:absolute;left:-9999px;">Pesquisar</label>
+      <input type="search" id="search-input" class="search-input" placeholder="Pesquisar no museu...">
+      <button type="submit" class="search-btn">Pesquisar</button>
+    </form>
+    <button type="button" class="hamburger search-toggle" data-search-toggle style="display:none;" aria-label="Abrir pesquisa">🔍</button>
+    <button type="button" class="theme-toggle" data-theme-toggle aria-label="Alternar tema escuro">
+      <i data-lucide="palette"></i>
+    </button>
+  </div>
+</header>
+
+<div class="search-feedback" data-search-feedback role="status" aria-live="polite"></div>
+
+<div class="sidebar-overlay" data-sidebar-overlay></div>
+
+<div class="layout">
+
+  <!-- ===================== SIDEBAR ===================== -->
+  <nav class="sidebar" data-sidebar aria-label="Navegação do artigo">
+    <button type="button" class="hamburger sidebar-close" data-sidebar-close aria-label="Fechar menu">✕</button>
+
+    <p class="sidebar-current-page">Alan Turing</p>
+
+    <div class="sidebar-group">
+      <p class="sidebar-heading">CONTEÚDO</p>
+      <ul class="sidebar-list">
+        <li><a href="#inicio">Início</a></li>
+        <li><a href="#infancia-educacao">Infância e educação</a></li>
+        <li><a href="#universidade">Universidade</a></li>
+        <li><a href="#maquina-de-turing">Máquina de Turing</a></li>
+        <li><a href="#segunda-guerra">Segunda Guerra Mundial</a></li>
+        <li><a href="#codigo-enigma">Código Enigma</a></li>
+        <li><a href="#pos-guerra">Pós-guerra</a></li>
+        <li><a href="#teste-de-turing">Teste de Turing</a></li>
+        <li><a href="#inteligencia-artificial">Inteligência artificial</a></li>
+        <li><a href="#legado">Legado</a></li>
+        <li><a href="#linha-do-tempo">Linha do tempo</a></li>
+        <li><a href="#referencias">Referências</a></li>
+      </ul>
+    </div>
+
+    <div class="sidebar-group">
+      <p class="sidebar-heading">OUTRAS PERSONALIDADES</p>
+      <ul class="sidebar-list">
+        <li><a href="ada-lovelace.html">Ada Lovelace</a></li>
+      </ul>
+    </div>
+
+    <div class="sidebar-group">
+      <p class="sidebar-heading">NAVEGAÇÃO</p>
+      <ul class="sidebar-list">
+        <li><a href="paginainicial.html">Museu Digital</a></li>
+        <li><a href="index.html">Alan Turing</a></li>
+        <li><a href="ada-lovelace.html">Ada Lovelace</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ===================== ARTIGO ===================== -->
+  <main class="article-wrapper" id="conteudo-principal">
+    <article>
+
+      <section class="article-intro-section fade-in" id="inicio">
+        <p class="article-meta">Artigo do Museu Digital da Matemática</p>
+        <h1 class="article-title">Alan Turing</h1>
+        <p class="article-subtitle">Matemático, lógico, criptanalista e pioneiro da ciência da computação.</p>
+        <hr class="article-divider">
+        <div class="article-intro">
+          <p>Alan Mathison Turing foi um matemático, lógico e cientista da computação britânico cuja obra ajudou a estabelecer os fundamentos teóricos da computação moderna. Seus estudos sobre algoritmos, computabilidade e máquinas abstratas influenciaram profundamente a ciência da computação e, posteriormente, o desenvolvimento da inteligência artificial.</p>
+        </div>
+      </section>
+      <figure class="museum-figure fade-in">
+        <img src="images/fig-turing-binario.svg" alt="Linhas de dígitos 0 e 1 em azul-petróleo" width="900" height="300" loading="lazy">
+        <figcaption>Ilustração: a computação começa em sequências de 0 e 1.</figcaption>
+      </figure>
+
+
+      <section class="article-section fade-in" id="infancia-educacao">
+        <h2>Infância e educação</h2>
+        <p>Turing demonstrou, desde cedo, grande interesse por ciências exatas, resolvendo problemas de forma independente e explorando ideias além do que era ensinado em sala de aula. Ainda jovem, destacou-se pela curiosidade incomum sobre <strong>matemática</strong> e sobre o funcionamento de sistemas lógicos, características que marcariam toda a sua trajetória intelectual.</p>
+        <p>Durante os anos escolares, nem sempre se adaptou bem a métodos de ensino tradicionais, mas encontrou apoio em professores que reconheceram seu talento singular para o raciocínio abstrato, o que o encaminhou progressivamente para os estudos avançados em matemática.</p>
+      </section>
+      <figure class="museum-figure fade-in">
+        <img src="images/fig-turing-simbolos.svg" alt="Símbolos matemáticos espalhados sobre fundo azul-petróleo" width="900" height="300" loading="lazy">
+        <figcaption>Ilustração: símbolos da matemática e da lógica, áreas que despertaram a curiosidade de Turing desde cedo.</figcaption>
+      </figure>
+
+
+      <section class="article-section fade-in" id="universidade">
+        <h2>Universidade</h2>
+        <p>Turing ingressou no <strong>King's College, em Cambridge</strong>, onde aprofundou seus estudos em matemática pura e lógica. Foi nesse ambiente acadêmico que teve contato com problemas fundamentais sobre os limites do que pode ser calculado, questão central da lógica matemática da época.</p>
+        <p>Esse período foi decisivo para sua formação intelectual, permitindo-lhe desenvolver as ideias que, pouco tempo depois, resultariam em uma de suas contribuições mais importantes: o conceito de máquina abstrata capaz de simular qualquer processo de cálculo.</p>
+      </section>
+      <figure class="museum-figure fade-in">
+        <img src="images/fig-turing-arcos.svg" alt="Arcos góticos em linhas finas" width="900" height="300" loading="lazy">
+        <figcaption>Ilustração: arcos góticos, inspirados na arquitetura universitária britânica.</figcaption>
+      </figure>
+
+
+      <section class="article-section fade-in" id="maquina-de-turing">
+        <h2>Máquina de Turing</h2>
+        <p>A <strong>Máquina de Turing</strong> é um modelo matemático abstrato criado para representar, de forma simples e rigorosa, o que significa "calcular" algo. Ela não é um computador físico, mas uma construção teórica: uma fita infinita dividida em células, uma cabeça de leitura e escrita, e um conjunto de regras que determinam como a máquina deve se mover e alterar os símbolos na fita.</p>
+
+        <div class="info-card concept">
+          <span class="info-card-label">Conceito</span>
+          <p>Um algoritmo é, essencialmente, uma sequência finita e bem definida de passos para resolver um problema — exatamente o tipo de processo que a Máquina de Turing foi criada para representar.</p>
+        </div>
+
+        <p>A importância desse modelo está em sua capacidade de definir, com precisão, os limites do que pode ou não ser computado. Qualquer computador moderno, por mais complexo que seja, é, em termos teóricos, equivalente a uma Máquina de Turing — por isso o conceito continua sendo uma base fundamental da ciência da computação.</p>
+
+        <div class="turing-diagram" role="img" aria-label="Diagrama de uma fita de Máquina de Turing com símbolos 0 1 1 0 1 0 e a cabeça de leitura posicionada sobre o terceiro símbolo.">
+          <p class="tape-label">FITA</p>
+          <div class="tape">
+            <span class="tape-cell">0</span>
+            <span class="tape-cell">1</span>
+            <span class="tape-cell active">1</span>
+            <span class="tape-cell">0</span>
+            <span class="tape-cell">1</span>
+            <span class="tape-cell">0</span>
+          </div>
+          <p class="tape-head"><span class="arrow">↑</span>CABEÇA</p>
+        </div>
+      </section>
+      <figure class="museum-figure fade-in">
+        <img src="images/fig-turing-estados.svg" alt="Diagrama com quatro estados ligados por setas" width="900" height="300" loading="lazy">
+        <figcaption>Ilustração: estados e transições, a lógica de uma Máquina de Turing.</figcaption>
+      </figure>
+
+
+      <section class="article-section fade-in" id="segunda-guerra">
+        <h2>Segunda Guerra Mundial</h2>
+        <p>Durante a Segunda Guerra Mundial, Turing integrou a equipe de criptoanalistas britânicos em <strong>Bletchley Park</strong>, centro dedicado à decifração de comunicações militares interceptadas do lado do Eixo. Ali, aplicou seus conhecimentos de lógica e matemática a problemas práticos de altíssima complexidade e urgência.</p>
+        <p>O trabalho em Bletchley Park reunia diversos especialistas e envolvia tanto raciocínio matemático quanto o desenvolvimento de dispositivos eletromecânicos capazes de acelerar processos que, feitos manualmente, seriam inviáveis dentro do tempo necessário.</p>
+      </section>
+      <figure class="museum-figure fade-in">
+        <img src="images/fig-turing-tambores.svg" alt="Fileiras de tambores rotativos" width="900" height="300" loading="lazy">
+        <figcaption>Ilustração: tambores rotativos, como os dos dispositivos eletromecânicos usados na decifração de mensagens.</figcaption>
+      </figure>
+
+
+      <section class="article-section fade-in" id="codigo-enigma">
+        <h2>Código Enigma</h2>
+        <p>A <strong>Enigma</strong> era uma máquina de cifragem utilizada pelas forças militares alemãs para embaralhar mensagens, tornando-as, em princípio, incompreensíveis a quem não possuísse a configuração correta. Sua importância estava em proteger informações estratégicas de operações militares.</p>
+        <p>De forma geral, a criptoanálise da época consistia em identificar padrões estatísticos e falhas de uso dentro do sistema de cifragem, permitindo reduzir o número de possibilidades a testar até tornar a decifração viável. Turing contribuiu de maneira significativa para esse esforço, participando do desenvolvimento de métodos e dispositivos que ajudaram a tornar esse processo mais rápido e sistemático.</p>
+
+        <div class="info-card">
+          <span class="info-card-label">Você sabia?</span>
+          <p>Decifrar a Enigma não foi obra de uma única pessoa: envolveu equipes inteiras de matemáticos, linguistas e engenheiros trabalhando em conjunto ao longo de anos.</p>
+        </div>
+
+        <p>É importante destacar que esse trabalho foi um esforço coletivo, e não o resultado isolado de uma única pessoa — ainda que a contribuição de Turing tenha sido amplamente reconhecida como fundamental para os avanços obtidos nessa área.</p>
+      </section>
+      <figure class="museum-figure fade-in">
+        <img src="images/fig-turing-rotores.svg" alt="Três rotores com o alfabeto ao redor" width="900" height="300" loading="lazy">
+        <figcaption>Ilustração: rotores com o alfabeto, o princípio de funcionamento da máquina Enigma.</figcaption>
+      </figure>
+
+
+      <section class="article-section fade-in" id="pos-guerra">
+        <h2>Pós-guerra</h2>
+        <p>Após o fim do conflito, Turing voltou sua atenção para o desenvolvimento da computação eletrônica, participando de projetos relacionados à construção de computadores programáveis, como o projeto do <strong>ACE</strong> (Automatic Computing Engine). Esse período consolidou sua transição de teórico da computação para participante ativo na construção de máquinas reais.</p>
+        <p>Nessa fase, também começou a refletir sobre temas que iam além do cálculo numérico, questionando até que ponto máquinas poderiam simular processos associados ao pensamento humano.</p>
+      </section>
+      <figure class="museum-figure fade-in">
+        <img src="images/fig-turing-valvulas.svg" alt="Fileira de válvulas eletrônicas acesas" width="900" height="300" loading="lazy">
+        <figcaption>Ilustração: válvulas eletrônicas, componentes dos primeiros computadores.</figcaption>
+      </figure>
+
+
+      <section class="article-section fade-in" id="teste-de-turing">
+        <h2>Teste de Turing</h2>
+        <p>O <strong>Teste de Turing</strong> é um experimento conceitual proposto por Turing para discutir se uma máquina poderia apresentar comportamento indistinguível do de um ser humano durante uma conversa. A ideia central não é definir se a máquina "pensa" no sentido humano da palavra, mas se ela pode se comportar, em uma interação por texto, de forma equivalente a uma pessoa.</p>
+
+        <div class="turing-test-card" role="img" aria-label="Diagrama mostrando um humano e uma máquina conversando entre si.">
+          <span class="party">HUMANO</span>
+          <span class="conversation">← conversa →</span>
+          <span class="party">MÁQUINA</span>
+        </div>
+
+        <p>Essa proposta se tornou um marco na discussão filosófica e científica sobre inteligência artificial, influenciando debates que continuam relevantes até os dias atuais.</p>
+      </section>
+
+      <section class="article-section fade-in" id="inteligencia-artificial">
+        <h2>Inteligência artificial</h2>
+        <p>As ideias de Turing sobre computabilidade e sobre a possibilidade de máquinas simularem comportamentos inteligentes lançaram as bases conceituais para o campo que, décadas depois, seria formalmente chamado de <strong>inteligência artificial</strong>. Ao propor perguntas sobre os limites e as possibilidades do raciocínio mecânico, Turing ajudou a estabelecer as primeiras questões que ainda orientam pesquisadores da área.</p>
+        <p>Seu trabalho não apresentou soluções definitivas, mas ofereceu um vocabulário conceitual e um ponto de partida teórico que permanece influente na forma como se discute inteligência artificial atualmente.</p>
+      </section>
+      <figure class="museum-figure fade-in">
+        <img src="images/fig-turing-rede.svg" alt="Rede de nós conectados em camadas" width="900" height="300" loading="lazy">
+        <figcaption>Ilustração: uma rede de nós conectados, representando sistemas de inteligência artificial.</figcaption>
+      </figure>
+
+
+      <section class="article-section fade-in" id="legado">
+        <h2>Legado</h2>
+        <p>O legado de Alan Turing se estende por diversas áreas do conhecimento:</p>
+        <p><strong>Computação:</strong> o conceito de Máquina de Turing continua sendo uma referência central para entender os limites teóricos dos computadores.</p>
+        <p><strong>Matemática:</strong> suas contribuições à lógica e à teoria da computabilidade ajudaram a redefinir questões fundamentais sobre o que pode ser calculado.</p>
+        <p><strong>Inteligência artificial:</strong> suas reflexões sobre máquinas pensantes inspiraram gerações de pesquisadores nessa área.</p>
+        <p><strong>Criptografia:</strong> seu trabalho em Bletchley Park deixou métodos e abordagens que influenciaram o desenvolvimento posterior da criptoanálise.</p>
+        <p><strong>Ciência:</strong> de forma mais ampla, sua trajetória é hoje lembrada como exemplo de como ideias teóricas podem transformar profundamente a prática científica e tecnológica.</p>
+      </section>
+
+      <section class="article-section fade-in" id="linha-do-tempo">
+        <h2>Linha do tempo</h2>
+        <div class="timeline">
+          <div class="timeline-track">
+            <div class="timeline-item">
+              <p class="timeline-year">1912</p>
+              <p class="timeline-desc">Nascimento</p>
+            </div>
+            <div class="timeline-item">
+              <p class="timeline-year">1931</p>
+              <p class="timeline-desc">Ingresso em Cambridge</p>
+            </div>
+            <div class="timeline-item">
+              <p class="timeline-year">1936</p>
+              <p class="timeline-desc">Publicação do trabalho sobre números computáveis</p>
+            </div>
+            <div class="timeline-item">
+              <p class="timeline-year">1939</p>
+              <p class="timeline-desc">Início do trabalho relacionado à guerra</p>
+            </div>
+            <div class="timeline-item">
+              <p class="timeline-year">1940</p>
+              <p class="timeline-desc">Desenvolvimento de métodos para criptanálise</p>
+            </div>
+            <div class="timeline-item">
+              <p class="timeline-year">1945</p>
+              <p class="timeline-desc">Trabalho no projeto de computador ACE</p>
+            </div>
+            <div class="timeline-item">
+              <p class="timeline-year">1950</p>
+              <p class="timeline-desc">Publicação do artigo relacionado ao Teste de Turing</p>
+            </div>
+            <div class="timeline-item">
+              <p class="timeline-year">1954</p>
+              <p class="timeline-desc">Falecimento</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="article-section fade-in" id="conexao-historica">
+        <h2>Conexão histórica</h2>
+        <div class="connection-box">
+          <p>Décadas antes do trabalho de Alan Turing sobre os fundamentos teóricos da computação, Ada Lovelace já havia refletido sobre a possibilidade de máquinas realizarem operações seguindo instruções. Embora seus contextos históricos fossem muito diferentes, ambos ocupam lugares importantes na história das ideias que ajudaram a formar a computação.</p>
+          <a href="ada-lovelace.html" class="connection-link">Conheça Ada Lovelace</a>
+        </div>
+      </section>
+
+      <section class="article-section fade-in" id="referencias">
+  <h2>Referências</h2>
+  <ul class="references-list">
+    <li>
+      <span class="ref-name">
+        <a href="https://www.britannica.com/biography/Alan-Turing" target="_blank" rel="noopener noreferrer">
+          Encyclopaedia Britannica
+        </a>
+      </span>
+      <span class="ref-desc">
+        Biografia e contexto histórico sobre Alan Turing.
+      </span>
+    </li>
+
+    <li>
+      <span class="ref-name">
+        <a href="https://www.computerhistory.org/" target="_blank" rel="noopener noreferrer">
+          Computer History Museum
+        </a>
+      </span>
+      <span class="ref-desc">
+        Acervo e materiais sobre a história da computação.
+      </span>
+    </li>
+
+    <li>
+      <span class="ref-name">
+        <a href="https://bletchleypark.org.uk/" target="_blank" rel="noopener noreferrer">
+          Bletchley Park
+        </a>
+      </span>
+      <span class="ref-desc">
+        Informações históricas sobre o trabalho de Turing durante a Segunda Guerra Mundial.
+      </span>
+    </li>
+
+    <li>
+      <span class="ref-name">
+        <a href="https://turingarchive.kings.cam.ac.uk/" target="_blank" rel="noopener noreferrer">
+          The Turing Archive
+        </a>
+      </span>
+      <span class="ref-desc">
+        Arquivo de documentos, manuscritos e escritos relacionados a Alan Turing.
+      </span>
+    </li>
+
+    <li>
+      <span class="ref-name">
+        <a href="https://www.turing.org.uk/book/" target="_blank" rel="noopener noreferrer">
+          Alan Turing: The Enigma — Andrew Hodges
+        </a>
+      </span>
+      <span class="ref-desc">
+        Biografia detalhada de Alan Turing, abordando sua vida, trabalho matemático, criptanálise e contribuição para a computação.
+      </span>
+    </li>
+
+    <li>
+      <span class="ref-name">
+        <a href="https://academic.oup.com/mind/article/LIX/236/433/986238" target="_blank" rel="noopener noreferrer">
+          Computing Machinery and Intelligence — A. M. Turing
+        </a>
+      </span>
+      <span class="ref-desc">
+        Artigo original publicado em 1950 na revista Mind, no qual Turing discute a possibilidade de máquinas demonstrarem comportamento inteligente.
+      </span>
+    </li>
+  </ul>
+</section>
+
+    </article>
+  </main>
+
+  <!-- ===================== INFOBOX ===================== -->
+  <aside class="infobox" aria-label="Informações resumidas sobre Alan Turing">
+    <p class="infobox-title">Alan Turing</p>
+    <!-- Imagem histórica de domínio público de Alan Turing.
+         Substitua o caminho abaixo por assets/alan-turing.jpg
+         com uma imagem licenciada adequadamente. -->
+    <img class="infobox-image" src="images/alan turing.jpg" alt="Retrato histórico de Alan Turing">
+    <p class="infobox-caption">Alan Turing, matemático e cientista da computação britânico.</p>
+    <table class="infobox-table">
+      <tbody>
+        <tr>
+          <th scope="row">Nome completo</th>
+          <td>Alan Mathison Turing</td>
+        </tr>
+        <tr>
+          <th scope="row">Nascimento</th>
+          <td>23 de junho de 1912</td>
+        </tr>
+        <tr>
+          <th scope="row">Local</th>
+          <td>Londres, Inglaterra</td>
+        </tr>
+        <tr>
+          <th scope="row">Falecimento</th>
+          <td>7 de junho de 1954</td>
+        </tr>
+        <tr>
+          <th scope="row">Área</th>
+          <td>Matemática, lógica e computação</td>
+        </tr>
+        <tr>
+          <th scope="row">Conhecido por</th>
+          <td>
+            <ul>
+              <li>Máquina de Turing</li>
+              <li>Criptanálise</li>
+              <li>Teste de Turing</li>
+              <li>Fundamentos da computação</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">Educação</th>
+          <td>
+            <ul>
+              <li>King's College, Cambridge</li>
+              <li>Princeton University</li>
+            </ul>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </aside>
+
+</div>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="site-footer">
+  <p class="footer-brand">Museu Digital da Matemática</p>
+  <p class="footer-tagline">Um projeto educacional dedicado à história da matemática e da computação.</p>
+  <nav class="footer-links" aria-label="Links do rodapé">
+    <a href="index.html">Alan Turing</a>
+    <a href="ada-lovelace.html">Ada Lovelace</a>
+  </nav>
+  <p class="footer-note">Projeto desenvolvido para fins educacionais. &copy; <span data-current-year></span></p>
+</footer>
+
+<button type="button" class="back-to-top" data-back-to-top aria-label="Voltar ao topo">↑</button>
+
+<script type="module">
+  import { createIcons, Palette } from 'https://esm.sh/lucide';
+  createIcons({ icons: { Palette } });
+</script>
+<script src="js/script.js"></script>
+</body>
+</html>

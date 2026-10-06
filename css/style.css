@@ -1,0 +1,994 @@
+/* =========================================================
+   MUSEU DIGITAL DA MATEMÁTICA — style.css
+   Organização: reset, variáveis, header, sidebar, article,
+   infobox, timeline, cards, footer, responsive, dark mode
+   ========================================================= */
+
+/* ---------------------------------------------------------
+   1. VARIÁVEIS
+   --------------------------------------------------------- */
+:root {
+  --primary: #3366CC;
+  --primary-dark: #244A99;
+  --text: #202122;
+  --text-secondary: #54595D;
+  --background: #FFFFFF;
+  --background-secondary: #F8F9FA;
+  --border: #A2A9B1;
+  --border-light: #EAECF0;
+
+  --font-serif: Georgia, "Times New Roman", Cambria, serif;
+  --font-sans: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+
+  --header-height: 56px;
+  --sidebar-width: 235px;
+  --infobox-width: 300px;
+  --radius: 3px;
+  --transition: 0.2s ease;
+}
+
+[data-theme="dark"] {
+  --primary: #7EA6FF;
+  --primary-dark: #A9C4FF;
+  --text: #E8E6E3;
+  --text-secondary: #B0B5BB;
+  --background: #101418;
+  --background-secondary: #171C21;
+  --border: #3A4048;
+  --border-light: #2A2F35;
+}
+
+/* ---------------------------------------------------------
+   2. RESET
+   --------------------------------------------------------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--background);
+  color: var(--text);
+  line-height: 1.6;
+  transition: background-color var(--transition), color var(--transition);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+  color: inherit;
+}
+
+:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: 0;
+  background: var(--primary);
+  color: #fff;
+  padding: 0.6rem 1rem;
+  z-index: 200;
+  border-radius: var(--radius);
+}
+
+.skip-link:focus {
+  left: 0.5rem;
+  top: 0.5rem;
+}
+
+/* ---------------------------------------------------------
+   3. HEADER
+   --------------------------------------------------------- */
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--header-height);
+  background-color: var(--background);
+  border-bottom: 1px solid var(--border-light);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
+  z-index: 100;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  min-width: 0;
+}
+
+.hamburger {
+  display: none;
+  font-size: 1.3rem;
+  padding: 0.3rem 0.5rem;
+  border-radius: var(--radius);
+}
+
+.hamburger:hover {
+  background-color: var(--background-secondary);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text);
+}
+
+.brand:hover {
+  text-decoration: none;
+}
+
+.brand-icon {
+  flex-shrink: 0;
+  color: var(--primary);
+}
+
+.brand-name {
+  font-family: var(--font-serif);
+  font-size: 0.95rem;
+  line-height: 1.2;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.brand-name span {
+  display: block;
+  font-weight: 400;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.search-form {
+  display: flex;
+  align-items: center;
+}
+
+.search-input {
+  width: 220px;
+  max-width: 40vw;
+  padding: 0.4rem 0.7rem;
+  border: 1px solid var(--border);
+  border-right: none;
+  border-radius: var(--radius) 0 0 var(--radius);
+  background-color: var(--background);
+  color: var(--text);
+  font-size: 0.85rem;
+}
+
+.search-btn {
+  padding: 0.45rem 0.8rem;
+  background-color: var(--background-secondary);
+  border: 1px solid var(--border);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  font-size: 0.85rem;
+  color: var(--text);
+}
+
+.search-btn:hover {
+  background-color: var(--border-light);
+}
+
+.theme-toggle {
+  font-size: 1.1rem;
+  padding: 0.35rem 0.55rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--border-light);
+}
+
+.theme-toggle:hover {
+  background-color: var(--background-secondary);
+}
+
+.search-feedback {
+  position: fixed;
+  top: calc(var(--header-height) + 0.5rem);
+  right: 1rem;
+  background-color: var(--text);
+  color: var(--background);
+  padding: 0.6rem 1rem;
+  border-radius: var(--radius);
+  font-size: 0.85rem;
+  z-index: 150;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  opacity: 0;
+  transform: translateY(-6px);
+  pointer-events: none;
+  transition: opacity var(--transition), transform var(--transition);
+}
+
+.search-feedback.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ---------------------------------------------------------
+   4. LAYOUT GERAL
+   --------------------------------------------------------- */
+.page-body {
+  padding-top: var(--header-height);
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: var(--sidebar-width) minmax(0, 1fr) var(--infobox-width);
+  align-items: start;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* ---------------------------------------------------------
+   5. SIDEBAR
+   --------------------------------------------------------- */
+.sidebar-overlay {
+  display: none;
+}
+
+.sidebar {
+  position: sticky;
+  top: var(--header-height);
+  height: calc(100vh - var(--header-height));
+  overflow-y: auto;
+  padding: 1.5rem 1rem;
+  border-right: 1px solid var(--border-light);
+  font-size: 0.85rem;
+}
+
+.sidebar-group {
+  margin-bottom: 1.5rem;
+}
+
+.sidebar-heading {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+  letter-spacing: 0.03em;
+  margin-bottom: 0.6rem;
+  padding-bottom: 0.3rem;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.sidebar-current-page {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: 0.95rem;
+  margin-bottom: 0.9rem;
+  color: var(--text);
+}
+
+.sidebar-list li {
+  margin-bottom: 0.15rem;
+}
+
+.sidebar-list a {
+  display: block;
+  padding: 0.35rem 0.5rem;
+  border-radius: var(--radius);
+  color: var(--text);
+  border-left: 2px solid transparent;
+}
+
+.sidebar-list a:hover {
+  background-color: var(--background-secondary);
+  text-decoration: none;
+}
+
+.sidebar-list a.active {
+  border-left: 2px solid var(--primary);
+  color: var(--primary);
+  background-color: var(--background-secondary);
+  font-weight: 600;
+}
+
+.sidebar-close {
+  display: none;
+}
+
+/* ---------------------------------------------------------
+   6. ARTIGO
+   --------------------------------------------------------- */
+.article-wrapper {
+  padding: 2rem 2.5rem 4rem;
+  min-width: 0;
+}
+
+.article-meta {
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.4rem;
+}
+
+.article-title {
+  font-family: var(--font-serif);
+  font-size: 2.2rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 0.4rem;
+}
+
+.article-subtitle {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+
+.article-divider {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin-bottom: 1.5rem;
+}
+
+.article-intro {
+  max-width: 68ch;
+  font-size: 1.02rem;
+}
+
+.article-section {
+  max-width: 68ch;
+  margin-top: 2.5rem;
+  scroll-margin-top: calc(var(--header-height) + 1rem);
+}
+
+.article-section h2 {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  border-bottom: 1px solid var(--border-light);
+  padding-bottom: 0.4rem;
+  margin-bottom: 1rem;
+}
+
+.article-section h3 {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  margin: 1.4rem 0 0.6rem;
+}
+
+.article-section p {
+  margin-bottom: 1rem;
+}
+
+.article-section strong {
+  color: var(--text);
+}
+
+/* Caixas de destaque dentro dos artigos */
+.info-card {
+  border-left: 3px solid var(--primary);
+  background-color: var(--background-secondary);
+  padding: 0.9rem 1.1rem;
+  margin: 1.3rem 0;
+  border-radius: 0 var(--radius) var(--radius) 0;
+  max-width: 68ch;
+}
+
+.info-card p {
+  margin-bottom: 0;
+  font-size: 0.92rem;
+}
+
+.info-card .info-card-label {
+  display: block;
+  font-weight: 700;
+  font-size: 0.78rem;
+  color: var(--primary);
+  margin-bottom: 0.3rem;
+}
+
+.info-card.concept {
+  border-left-color: var(--text-secondary);
+}
+
+.info-card.concept .info-card-label {
+  color: var(--text-secondary);
+}
+
+/* Diagrama Máquina de Turing */
+.turing-diagram {
+  max-width: 68ch;
+  margin: 1.5rem 0;
+  padding: 1.3rem;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius);
+  background-color: var(--background-secondary);
+  text-align: center;
+  overflow-x: auto;
+}
+
+.tape {
+  display: inline-flex;
+  gap: 0;
+}
+
+.tape-cell {
+  width: 42px;
+  height: 42px;
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Courier New", monospace;
+  font-size: 1.05rem;
+  background-color: var(--background);
+}
+
+.tape-cell.active {
+  border-color: var(--primary);
+  border-width: 2px;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.tape-head {
+  margin-top: 0.4rem;
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+}
+
+.tape-head .arrow {
+  display: block;
+  color: var(--primary);
+  font-size: 1.1rem;
+  margin-bottom: 0.1rem;
+}
+
+.tape-label {
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  color: var(--text-secondary);
+  margin-bottom: 0.6rem;
+}
+
+/* Card do Teste de Turing */
+.turing-test-card {
+  max-width: 68ch;
+  margin: 1.5rem 0;
+  padding: 1.2rem;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius);
+  background-color: var(--background-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  text-align: center;
+}
+
+.turing-test-card .party {
+  font-weight: 700;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background-color: var(--background);
+}
+
+.turing-test-card .conversation {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  font-style: italic;
+}
+
+/* Conexão histórica */
+.connection-box {
+  max-width: 68ch;
+  margin-top: 1rem;
+  padding: 1.2rem 1.3rem;
+  background-color: var(--background-secondary);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius);
+}
+
+.connection-box p {
+  margin-bottom: 1rem;
+}
+
+.connection-link {
+  display: inline-block;
+  padding: 0.55rem 1.1rem;
+  background-color: var(--primary);
+  color: #fff;
+  border-radius: var(--radius);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.connection-link:hover {
+  background-color: var(--primary-dark);
+  text-decoration: none;
+}
+
+/* Referências */
+.references-list {
+  max-width: 68ch;
+}
+
+.references-list li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--border-light);
+  font-size: 0.92rem;
+}
+
+.references-list li:last-child {
+  border-bottom: none;
+}
+
+.references-list .ref-name {
+  font-weight: 600;
+}
+
+.references-list .ref-desc {
+  display: block;
+  color: var(--text-secondary);
+  font-size: 0.82rem;
+}
+
+/* ---------------------------------------------------------
+   7. INFOBOX
+   --------------------------------------------------------- */
+.infobox {
+  margin: 2rem 1.5rem 2rem 0;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius);
+  background-color: var(--background-secondary);
+  font-size: 0.85rem;
+  overflow: hidden;
+}
+
+.infobox-title {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: 1.05rem;
+  text-align: center;
+  padding: 0.8rem;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.infobox-image {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  background-color: var(--border-light);
+}
+
+.infobox-caption {
+  text-align: center;
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  padding: 0.5rem 0.8rem;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.infobox-table {
+  width: 100%;
+}
+
+.infobox-table tr {
+  border-bottom: 1px solid var(--border-light);
+}
+
+.infobox-table tr:last-child {
+  border-bottom: none;
+}
+
+.infobox-table th,
+.infobox-table td {
+  text-align: left;
+  padding: 0.6rem 0.8rem;
+  vertical-align: top;
+}
+
+.infobox-table th {
+  width: 38%;
+  font-weight: 600;
+  color: var(--text-secondary);
+  font-size: 0.78rem;
+}
+
+.infobox-table td ul li {
+  margin-bottom: 0.15rem;
+}
+
+/* ---------------------------------------------------------
+   8. TIMELINE
+   --------------------------------------------------------- */
+.timeline {
+  max-width: 68ch;
+  margin: 1.5rem 0 0.5rem;
+}
+
+.timeline-track {
+  display: flex;
+  overflow-x: auto;
+  gap: 0;
+  padding-bottom: 1rem;
+}
+
+.timeline-item {
+  flex: 0 0 auto;
+  width: 150px;
+  position: relative;
+  padding: 1.5rem 0.6rem 0;
+  text-align: center;
+  border-top: 3px solid var(--primary);
+}
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  top: -7px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--primary);
+  border: 2px solid var(--background);
+}
+
+.timeline-year {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  color: var(--primary);
+  font-size: 1rem;
+}
+
+.timeline-desc {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  margin-top: 0.2rem;
+}
+
+/* ---------------------------------------------------------
+   9. FOOTER
+   --------------------------------------------------------- */
+.site-footer {
+  border-top: 1px solid var(--border-light);
+  background-color: var(--background-secondary);
+  padding: 2rem 1.5rem;
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.footer-brand {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 0.4rem;
+}
+
+.footer-tagline {
+  margin-bottom: 0.8rem;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 0.8rem;
+  flex-wrap: wrap;
+}
+
+.footer-note {
+  font-size: 0.78rem;
+}
+
+/* ---------------------------------------------------------
+   10. BOTÃO VOLTAR AO TOPO
+   --------------------------------------------------------- */
+.back-to-top {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background-color: var(--primary);
+  color: #fff;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: opacity var(--transition), transform var(--transition), visibility var(--transition);
+  z-index: 90;
+}
+
+.back-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.back-to-top:hover {
+  background-color: var(--primary-dark);
+}
+
+/* ---------------------------------------------------------
+   11. ANIMAÇÃO DE ENTRADA (discreta)
+   --------------------------------------------------------- */
+.fade-in {
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.fade-in.shown {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fade-in {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* ---------------------------------------------------------
+   12. RESPONSIVIDADE
+   --------------------------------------------------------- */
+
+/* Tablet: 900px–1200px — infobox continua, sidebar mais estreita */
+@media (max-width: 1200px) {
+  :root {
+    --sidebar-width: 200px;
+    --infobox-width: 260px;
+  }
+
+  .article-wrapper {
+    padding: 2rem 1.5rem 4rem;
+  }
+}
+
+/* 900px — infobox passa para dentro do fluxo do artigo */
+@media (max-width: 900px) {
+  .layout {
+    grid-template-columns: var(--sidebar-width) minmax(0, 1fr);
+  }
+
+  .infobox {
+    grid-column: 2;
+    margin: 0 0 2rem 0;
+    max-width: 68ch;
+  }
+}
+
+/* Mobile: 600px — sidebar vira menu lateral, tudo em coluna única */
+@media (max-width: 600px) {
+  .search-form {
+    display: none;
+  }
+
+  .search-toggle {
+    display: inline-flex;
+  }
+
+  .hamburger {
+    display: inline-flex;
+  }
+
+  .layout {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    position: fixed;
+    top: var(--header-height);
+    left: 0;
+    bottom: 0;
+    width: min(80vw, 300px);
+    height: auto;
+    background-color: var(--background);
+    box-shadow: 2px 0 12px rgba(0, 0, 0, 0.15);
+    transform: translateX(-105%);
+    transition: transform var(--transition);
+    z-index: 120;
+    border-right: 1px solid var(--border-light);
+  }
+
+  .sidebar.open {
+    transform: translateX(0);
+  }
+
+  .sidebar-close {
+    display: block;
+    margin-left: auto;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+    padding: 0.2rem 0.5rem;
+  }
+
+  .sidebar-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    top: var(--header-height);
+    background-color: rgba(0, 0, 0, 0.35);
+    z-index: 110;
+  }
+
+  .sidebar-overlay.visible {
+    display: block;
+  }
+
+  .infobox {
+    grid-column: 1;
+  }
+
+  .article-wrapper {
+    padding: 1.5rem 1.1rem 3rem;
+  }
+
+  .article-title {
+    font-size: 1.7rem;
+  }
+
+  .article-intro,
+  .article-section,
+  .infobox,
+  .references-list,
+  .connection-box,
+  .timeline,
+  .turing-diagram,
+  .turing-test-card {
+    max-width: 100%;
+  }
+
+  .tape-cell {
+    width: 34px;
+    height: 34px;
+    font-size: 0.9rem;
+  }
+
+  .back-to-top {
+    bottom: 1rem;
+    right: 1rem;
+  }
+}
+
+/* =========================================================
+   REFRESH VISUAL — camada de design por cima da base acima
+   ========================================================= */
+:root{--font-serif:"Newsreader",Georgia,serif;--font-sans:"Hanken Grotesk","Segoe UI",Arial,sans-serif;--primary:#2f3f9a;--primary-dark:#222e73;--text:#171a2e;--text-secondary:#585d78;--background:#fbfbfd;--background-secondary:#f0f2f8;--border:#c4c9dc;--border-light:#e1e4ef;--radius:10px;--shadow:0 10px 30px -12px rgba(23,26,46,.28)}
+.page-turing{--primary:#0b6b7e;--primary-dark:#07505f}
+.page-ada{--primary:#8a2c6c;--primary-dark:#681f50}
+[data-theme="dark"]{--primary:#a3b0ff;--primary-dark:#c4ccff;--text:#eceef8;--text-secondary:#aeb3cb;--background:#0e1120;--background-secondary:#161a2e;--border:#3a4060;--border-light:#272c47;--shadow:0 10px 30px -12px rgba(0,0,0,.7)}
+[data-theme="dark"] .page-turing{--primary:#63cddd;--primary-dark:#9fe4ef}
+[data-theme="dark"] .page-ada{--primary:#ee96cd;--primary-dark:#f6bfe1}
+[data-theme="dark"] .connection-link,[data-theme="dark"] .back-to-top,[data-theme="dark"] .search-btn,[data-theme="dark"] .infobox-title{color:#0e1120}
+
+body{font-family:var(--font-serif);font-size:1.0625rem;line-height:1.7}
+.site-header,.sidebar,.infobox,.timeline,.search-feedback,.connection-link,.back-to-top,.info-card-label,.article-meta,.tape-label,.tape-head,.references-list,.site-footer{font-family:var(--font-sans)}
+
+/* Cabeçalho */
+.site-header{background:color-mix(in srgb,var(--background) 85%,transparent);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px)}
+.brand-name{font-size:1.1rem}
+.search-input{border-radius:999px 0 0 999px;padding-left:1rem}
+.search-btn{border-radius:0 999px 999px 0;background:var(--primary);border-color:var(--primary);color:#fff;font-weight:600}
+.search-btn:hover{background:var(--primary-dark)}
+.theme-toggle{border-radius:50%;width:38px;height:38px}
+
+/* Menu lateral */
+.sidebar-current-page{font-size:1.35rem}
+.sidebar-heading{color:var(--primary);letter-spacing:.06em}
+.sidebar-list a{border-radius:0 8px 8px 0;border-left-width:3px}
+.sidebar-list a.active{background:color-mix(in srgb,var(--primary) 12%,transparent);border-left:3px solid var(--primary)}
+
+/* Abertura do artigo */
+.article-intro-section{max-width:860px;padding-top:.5rem}
+.article-meta{font-size:.88rem;font-weight:600;color:var(--primary);margin-bottom:.7rem}
+.article-title{font-size:clamp(2.6rem,6vw,4.6rem);font-weight:600;line-height:1.02;letter-spacing:-.02em;margin-bottom:.7rem}
+.article-subtitle{font-size:1.35rem;line-height:1.4;max-width:42ch}
+.article-divider{width:72px;border-top:4px solid var(--primary);border-radius:4px;margin:1.3rem 0 1.7rem}
+.article-intro{font-size:1.2rem;max-width:68ch}
+
+/* Seções */
+.article-section{margin-top:3.4rem}
+.article-section h2{font-size:1.95rem;font-weight:600;line-height:1.2;border-bottom:0;padding-bottom:0;margin-bottom:1.1rem}
+.article-section h2::after{content:"";display:block;width:36px;height:3px;border-radius:3px;background:var(--primary);margin-top:.55rem}
+.article-section p{font-size:1.12rem}
+.article-section .info-card p,.article-section .connection-box p{font-size:1.02rem}
+
+/* Ilustrações entre seções */
+.museum-figure{margin:3.2rem 0 0;max-width:860px}
+.museum-figure img{width:100%;height:auto;border-radius:16px;box-shadow:var(--shadow)}
+.museum-figure figcaption{font-family:var(--font-sans);font-size:.84rem;color:var(--text-secondary);margin-top:.75rem;padding-left:.9rem;border-left:3px solid var(--primary)}
+
+/* Caixas e diagramas */
+.info-card{border:1px solid var(--border-light);border-left:4px solid var(--primary);border-radius:14px;padding:1.1rem 1.35rem;background:color-mix(in srgb,var(--primary) 6%,var(--background))}
+.info-card .info-card-label,.info-card.concept .info-card-label{color:var(--primary);font-size:.86rem}
+.info-card.concept{border-left-color:var(--primary)}
+.turing-diagram,.turing-test-card{border-radius:16px;padding:1.6rem}
+.tape{gap:6px}
+.tape-cell{width:50px;height:50px;border-radius:10px}
+.tape-cell.active{background:color-mix(in srgb,var(--primary) 16%,var(--background))}
+.turing-test-card .party{border-radius:999px;padding:.6rem 1.4rem}
+.connection-box{border-radius:18px;padding:1.5rem 1.6rem;background:linear-gradient(135deg,color-mix(in srgb,var(--primary) 11%,var(--background)),var(--background-secondary))}
+.connection-box::after{content:"";display:block;clear:both}
+.connection-link{border-radius:999px;padding:.6rem 1.3rem;margin:0 .6rem .4rem 0}
+.person-thumb{float:left;width:84px;height:84px;border-radius:50%;object-fit:cover;object-position:center 15%;margin:0 1.1rem .6rem 0;box-shadow:0 0 0 3px var(--primary)}
+
+/* Infobox */
+.infobox{border-radius:18px;box-shadow:var(--shadow);position:sticky;top:calc(var(--header-height) + 1.5rem);max-height:calc(100vh - var(--header-height) - 3rem);overflow-y:auto}
+.infobox-title{background:var(--primary);color:#fff;border-bottom:0;font-size:1.2rem;padding:.9rem}
+.infobox-image{object-position:center 18%}
+.infobox-image img{width:100%;height:100%;object-fit:cover;object-position:center 18%}
+.infobox table{width:100%;border-collapse:collapse}
+.infobox tr{border-bottom:1px solid var(--border-light)}
+.infobox tr:last-child{border-bottom:0}
+.infobox th,.infobox td{text-align:left;padding:.65rem .9rem;vertical-align:top}
+.infobox th{width:38%;font-size:.78rem;font-weight:600;color:var(--text-secondary)}
+.article-aside{position:sticky;top:var(--header-height)}
+.article-aside .infobox{position:static;max-height:none;overflow:hidden}
+
+/* Linha do tempo */
+.timeline{max-width:100%}
+.timeline-item{width:170px}
+.timeline-item::before{width:14px;height:14px;top:-8px;box-shadow:0 0 0 5px color-mix(in srgb,var(--primary) 22%,transparent)}
+.timeline-year{font-size:1.2rem}
+.timeline-track{scrollbar-width:thin}
+
+/* Referências */
+.references-list li,.references-list li:last-child{padding:.9rem 1.1rem;border:1px solid var(--border-light);border-radius:12px;margin-bottom:.6rem;background:var(--background-secondary)}
+
+/* Rodapé */
+.site-footer{background:linear-gradient(160deg,#141a47,#2f3f9a);color:#d6dcff;border-top:0;padding:3.2rem 1.5rem}
+.footer-brand{color:#fff;font-size:1.5rem}
+.site-footer a{color:#fff}
+.footer-links{gap:1.6rem}
+
+@media (max-width:900px){.infobox,.article-aside{position:static;max-height:none}.article-aside{grid-column:2}.article-aside .infobox{margin:0 0 2rem}}
+@media (max-width:600px){.article-aside{grid-column:1}.museum-figure{margin-top:2.2rem}.article-section h2{font-size:1.6rem}}
